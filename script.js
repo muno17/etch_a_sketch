@@ -33,7 +33,7 @@ sizeButton.addEventListener("click", () => {
 
 gridContainer.addEventListener("mouseover", (e) => {
     if (e.target != gridContainer) {
-        e.target.style.backgroundColor = "yellow";
+        e.target.style.backgroundColor = "white";
     }
 });
 

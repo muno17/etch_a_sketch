@@ -19,7 +19,7 @@ body {
 
 #gridContainer {
     border-style: solid;
-    border-color: black;
+    border-color: white;
     width: 600px;
     height: 600px;
     display: flex;
@@ -31,8 +31,17 @@ body {
 .gridSquare {
     border-style: solid;
     border-width: 0.5px;
-    border-color: black;
+    border-color: white;
+    background-color: black;
     flex: auto;
+}
+
+#buttonArea {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 button {
