@@ -1,12 +1,12 @@
 // create 16x16 grid
 
 // grab button
-const button = document.querySelector("button");
+const sizeButton = document.querySelector("#sizeButton");
 
 //grab container
 const gridContainer = document.querySelector("#gridContainer");
 
-// create 16x16 grid
+// create 16x16 grid intially
 window.addEventListener("load", createGrid(16));
 
 function createGrid(size) {
@@ -16,6 +16,8 @@ function createGrid(size) {
         for (let j = 0; j < size; j++) {
             let gridSquare = document.createElement("div");
             gridSquare.classList.add("gridSquare");
+
+            // calculate height and width based on size input
             gridSquare.style.height = `${(600 - 2 * size) / size}px`;
             gridSquare.style.width = `${(600 - 2 * size) / size}px`;
 
@@ -24,7 +26,7 @@ function createGrid(size) {
     }
 }
 
-button.addEventListener("click", () => {
+sizeButton.addEventListener("click", () => {
     let size = prompt("Enter a size");
     createGrid(size);
 });
@@ -34,3 +36,8 @@ gridContainer.addEventListener("mouseover", (e) => {
         e.target.style.backgroundColor = "yellow";
     }
 });
+
+const resetButton = document.querySelector("#resetButton");
+resetButton.addEventListener('click', () => {
+    createGrid(16);
+})
