@@ -28,7 +28,11 @@ function createGrid(size) {
 
 sizeButton.addEventListener("click", () => {
     let size = prompt("Enter a size");
-    createGrid(size);
+    if (size == null || size == "") {
+        return;
+    } else {
+        createGrid(size);
+    }
 });
 
 gridContainer.addEventListener("mouseover", (e) => {
@@ -38,6 +42,6 @@ gridContainer.addEventListener("mouseover", (e) => {
 });
 
 const resetButton = document.querySelector("#resetButton");
-resetButton.addEventListener('click', () => {
+resetButton.addEventListener("click", () => {
     createGrid(16);
-})
+});
