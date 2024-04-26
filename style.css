@@ -1,5 +1,18 @@
+* {
+        font-family: ubuntu, sans-serif;
+}
+
 html {
     background-color: #d3d3d3;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
 }
 
 #gridContainer {
@@ -10,11 +23,21 @@ html {
     display: flex;
     flex-wrap: wrap;
     box-shadow: 1px 1px 8px black;
+    align-self: center;
 }
 
 .gridSquare {
     border-style: solid;
-    border-width: .5px;
+    border-width: 0.5px;
     border-color: black;
     flex: auto;
+}
+
+button {
+    width: 240px;
+    height: 80px;
+    font-size: 32px;
+    background-color: #BC81BF;
+    color: white;
+    border-radius: 20px;
 }
